@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 9994423949c6dacf87f75e9905629c46707182b6a6bbabd189bf3c86a9fac7b5
+
+name:           first
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/RadoBart/first#readme>
+homepage:       https://github.com/RadoBart/first#readme
+bug-reports:    https://github.com/RadoBart/first/issues
+author:         Radovan Bartanus
+maintainer:     bartanusr@gmail.com
+copyright:      2020 Radovan Bartanus
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/RadoBart/first
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_first
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable first-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_first
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , first
+  default-language: Haskell2010
+
+test-suite first-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_first
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , first
+  default-language: Haskell2010
